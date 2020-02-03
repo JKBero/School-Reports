@@ -14,15 +14,18 @@ describe '.report()' do
     expect(report('r')).to eq "Red: 1"
   end
 
-  it 'returns 2 green when given 2 green' do
+  it 'returns multiple greens when given multiple greens' do
     expect(report('g, g')).to eq "Green: 2"
+    expect(report('g, g, g, g, g')).to eq "Green: 5"
   end
 
-  it 'returns 2 ambers when given 2 ambers' do
+  it 'returns multiple ambers when given multiple ambers' do
     expect(report('a, a')).to eq "Amber: 2"
+    expect(report('a, a, a, a')).to eq "Amber: 4"
   end
 
-  it 'returns 2 reds when given 2 reds' do
+  it 'returns multiple reds when given multiple reds' do
     expect(report('r, r')).to eq "Red: 2"
+    expect(report('r, r, r, r, r, r')).to eq "Red: 6"
   end
 end
