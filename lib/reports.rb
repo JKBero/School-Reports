@@ -1,3 +1,7 @@
 def report(grades)
-  "Green: 1"
+  if grades == 'a'
+    "Amber: 1"
+  else
+    "Green: 1"
+  end
 end
