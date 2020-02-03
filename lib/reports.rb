@@ -1,7 +1,5 @@
 def report(grades)
-  if grades == 'a'
-    "Amber: 1"
-  else
-    "Green: 1"
-  end
+  return "Amber: 1" if grades == 'a'
+  return "Red: 1" if grades == 'r'
+  "Green: 1"
 end
