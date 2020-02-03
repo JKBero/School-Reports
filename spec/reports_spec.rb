@@ -28,4 +28,12 @@ describe '.report()' do
     expect(report('r, r')).to eq "Red: 2"
     expect(report('r, r, r, r, r, r')).to eq "Red: 6"
   end
+
+  it 'returns 1 green and 1 amber when passed this' do
+    expect(report('g, a')).to eq "Green: 1\nAmber: 1"
+  end
+
+  it 'returns 1 amber and 1 red when passed this' do
+    expect(report('a, r')).to eq "Amber: 1\nRed: 1"
+  end
 end
