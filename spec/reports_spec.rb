@@ -21,4 +21,8 @@ describe '.report()' do
   it 'returns 2 ambers when given 2 ambers' do
     expect(report('a, a')).to eq "Amber: 2"
   end
+
+  it 'returns 2 reds when given 2 reds' do
+    expect(report('r, r')).to eq "Red: 2"
+  end
 end
