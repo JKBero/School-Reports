@@ -1,6 +1,6 @@
 def report(grades)
-  return "Amber: 1" if grades == 'a'
+  p grades.count('a')
+  return "Amber: #{grades.count('a')}" if grades.count('a') > 0
+  return "Green: #{grades.count('g')}" if grades.count('g') > 0
   return "Red: 1" if grades == 'r'
-  return "Green: 2" if grades == 'g, g'
-  "Green: 1"
 end
