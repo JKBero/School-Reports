@@ -36,4 +36,11 @@ describe '.report()' do
   it 'returns 1 amber and 1 red when passed this' do
     expect(report('Amber, Red')).to eq "Amber: 1\nRed: 1"
   end
+
+  it 'return multiple grades in the report when given multiple grades' do
+    expect(report('Green, Amber, Amber, Amber, Red, Red')).to eq "Green: 1\nAmber: 3\nRed: 2"
+    expect(report('Green, Green, Green, Red')).to eq "Green: 3\nRed: 1"
+    expect(report('Amber, Red, Red, Red, Red, Red, Red, Red')).to eq "Amber: 1\nRed: 7"
+  end
+  
 end
